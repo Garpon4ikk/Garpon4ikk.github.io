@@ -1,0 +1,313 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+nav{
+	widows: 100%;
+	height: 60px;
+	background: #344851;
+}
+
+.logo{
+	color: white;
+	font-size: 28px;
+	line-height: 60px;
+	padding-left: 388px;
+	float: left;
+}
+
+.menu{
+	float: left;
+	padding-left: 432px;
+}
+
+.menu li{
+	float: left;
+	line-height: 60px;
+	color: white ;
+	margin-right: 40px;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.main{
+	width: 100%;
+	height: calc(100% - 60px);
+	background: url(../img/boy.png) 90% 100%/auto 85% no-repeat, url(../img/фон.png) center/cover no-repeat;
+}
+
+.title_container {
+	float: left;
+	margin: 432px 0px 0px 404px;
+	color: rgb(44, 56, 74);
+	text-align: center;
+}
+
+.title_container h1{
+	font-size: 60px;
+	font-weight: bold;
+}
+
+.title_container h4{
+	margin-top: 40px;
+	font-size: 22px;
+	color: #79818d;
+}
+
+.title_container input {
+	height: 40px;
+	text-align: center;
+	border: 2px solid #6d7682;
+	border-radius: 5px;
+	color: #6d7682;
+	font-size: 13px;
+	padding: 0px 16px;
+	margin: 58px 14px;
+}
+
+.logo1 {
+	text-align: center;
+	font-size: 30px;
+	margin: 110px 0px 42px 0px;
+}
+
+.imgs {text-align: center;}
+
+.BW {
+		padding: 60px 0px 23px 0px;
+		text-align: center;
+}
+
+.second {
+	text-align: center;
+}
+ .second span {
+ 	text-align: left;
+ }
+
+ .second input {
+ 	background: url(../img/DowlandIco.png) left/12px 11px no-repeat ;
+ 	background-position: 7%  ;
+ 	height: 33px;
+ 	border: 2px solid #6f707e;
+ 	border-radius: 5px;
+ 	font-size: 13px;
+ 	padding: 9px 11px 9px 18px;
+ }
+
+.third {
+	margin-top: 97px;
+	padding-top: 3px;
+	background: url(../img/ЧтоЯумеюФон.jpg) center/100% 100% no-repeat;
+}
+
+.third ul {
+	text-align: center;
+	display: inline-block;
+	padding: 108px 260px;
+}
+
+.third li {
+	float: left;
+	text-align: center;
+	margin: 0px 41px;
+}
+
+.third li img {
+	margin-bottom: 35px;
+	width: 55px;
+	height: 36px;
+}
+
+.third h4 {
+	font-size: 18px;
+	color: #cf7600;
+}
+
+.third h5 {
+	font-size: 14px;
+	color: #3f495a;
+}
+
+.casess h1 {
+	text-align: center;
+	color: #3f495a;
+	font-size: 14px;
+	margin: 36px 0px 42px 0px;
+}
+
+.casess h2 {
+	text-align: center;
+}
+
+.Company{
+	float: left;
+}
+
+.Company h3 {
+	margin-left: 350px;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.Company h4 {
+	margin-left: 350px;
+	font-size: 16px;
+
+}
+
+.Company a {
+	margin: 38px 0px 0px 350px; /*margin 38px не работает, сдлал 2 <br> перед <a>
+	margin-top тоже почему то не работает*/
+	border: 1px solid #63b5ae;
+	background: #63b5ae;
+	border-radius: 5px;
+	padding: 15px 40px;
+}
+
+.ProjectName {
+	margin-left: 580px;
+
+}
+
+.ProjectName h4 {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.ProjectName h5 {
+	font-size: 18px;
+}
+
+.EzMoney {
+	margin-top: 200px;
+}
+
+.EzMoney h3 {
+	font-size: 25px;
+}
+.aboba {
+	margin-left: 494px;
+	text-align: left;
+}
+
+.EzMoney select {
+	border: 1px solid #eee;
+	padding: 24px 730px 24px 24px;
+	background-color: #eee;
+}
+
+.SS ul {
+	float: left;
+	line-height: 30px;
+	font-size: 20px;
+}
+
+.SS2 {
+	float: right;
+	font-size: 20px;
+	line-height: 30px;
+	margin-right: 494px;
+}
+
+.stata {
+	margin-top: 97px;
+	padding-top: 3px;
+	background: url(../img/fon2.jpg) center/100% 100% no-repeat;
+}
+.stata ul {
+	text-align: center;
+	display: inline-block;
+	padding: 108px 260px;
+}
+.stata li {
+	float: left;
+	text-align: center;
+	margin: 0px 92px;
+}
+
+.stata li img {
+	margin-bottom: 35px;
+	width: 100px;
+}
+
+.stata h4 {
+	font-size: 18px;
+	color: #323e4f;
+}
+
+.stata h5 {
+	font-size: 14px;
+	color: #323e4f;
+}
+
+.Otzivi {
+	text-align: center;
+	font-size: 15px;
+}
+
+footer {
+	background: url(../img/fon3.jpg) center/ 100% 100% no-repeat;
+	text-align: center;
+}
+
+footer h2 {
+	color: white;
+	font-size: 30px;
+	margin: 110px 0px 42px 0px;
+}
+
+footer span {
+	color: white;
+	font-size: 15px ;
+}
+
+footer ul {
+	text-align: center;
+	display: inline-block;
+	padding: 108px 260px 0px 260px;
+}
+footer li {
+	float: left;
+	text-align: center;
+	margin: 0px 92px;
+}
+
+footer li img {
+	margin-bottom: 35px;
+	width: 50px;
+	height: 50px;
+}
+
+footer a{
+	color: white;
+}
+
+footer h2 {
+	color: white;
+	font-size: 20px;
+}
+
+.up {
+	/*не понимаю как сделать окна ввода по рамерам*/
+	padding: 5px 20px;
+}
+.send input {
+	height: 20px;
+	width: 100px;
+	text-align: center;
+	border: 2px solid #6d7682;
+	border-radius: 5px;
+	color: #6d7682;
+	font-size: 13px;
+	padding: 0px 16px;
+	margin: 58px 14px;
+}
+.end{
+	widows: 100%;
+	height: 60px;
+	background: #344851;
+	text-align: center;
+	color: white;
+	padding-top: 20px;
+}
