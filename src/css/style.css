@@ -2,10 +2,45 @@ body {
 	font-family: Arial, sans-serif;
 }
 
+/*Прелоадер начался*/
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background: #fff;
+  z-index: 1001;
+}
+
+.preloader__image {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 64px;
+  height: 64px;
+  margin-top: -32px;
+  margin-left: -32px;
+  background: url('../img/preloader.gif') no-repeat 50% 50%;
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+/*прелоадер кончился*/
+
 nav{
-	widows: 100%;
+	width: 100%;
 	height: 60px;
 	background: #344851;
+	position: fixed;
+	z-index: 2;
 }
 
 .logo{
@@ -14,6 +49,14 @@ nav{
 	line-height: 60px;
 	padding-left: 388px;
 	float: left;
+	-webkit-animation: coming 0.4s ease;
+	-o-animation: coming 0.4s ease;
+	animation: coming 0.4s ease;
+}
+
+main {
+	width: 100%;
+	height: 100%;
 }
 
 .menu{
@@ -28,11 +71,37 @@ nav{
 	margin-right: 40px;
 	font-size: 16px;
 	text-transform: uppercase;
+	-webkit-animation: topshift 0.4s ease forwards;
+	-o-animation: topshift 0.4s ease forwards;
+	animation: topshift 0.4s ease forwards;
+	opacity: 0;
 }
+
+.menu li a {
+	transition: all 0.3s;
+	color: white;
+	transform: scale(1);
+	display: inline-block;
+	
+}
+
+.menu li a:visited {
+	color: white;
+}
+
+
+.menu li a:hover {
+	color: orange;
+}
+
+.menu li a:active {
+	transform: scale(1.1);
+}
+
 
 .main{
 	width: 100%;
-	height: calc(100% - 60px);
+	height: 100% ;
 	background: url(../img/boy.png) 90% 100%/auto 85% no-repeat, url(../img/фон.png) center/cover no-repeat;
 }
 
@@ -41,6 +110,16 @@ nav{
 	margin: 432px 0px 0px 404px;
 	color: rgb(44, 56, 74);
 	text-align: center;
+	opacity: 0;
+	-webkit-animation: titlemove 1s ease forwards;
+	-o-animation: titlemove 1s ease forwards;
+	animation: titlemove 1s ease forwards;
+	-webkit-animation-delay: 2.4s;
+	-moz-animation-delay: 2.4s;
+	-ms-animation-delay: 2.4s;
+	-o-animation-delay: 2.4s;
+	animation-delay: 2.4s;
+	
 }
 
 .title_container h1{
@@ -65,10 +144,92 @@ nav{
 	margin: 58px 14px;
 }
 
+.title_container input /*АНИМКИ*/ {
+	transition: all 0.2s;
+	transform: scale(1.0);
+}
+
+.title_container input:hover {
+	background: #344851;
+	color: white;
+}
+
+.title_container input:active {
+	transform: scale(1.1);
+}
+
+@keyframes coming {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes topshift{
+	from {
+		opacity: 0;
+		margin-top: -80px;
+	}
+	to {
+		opacity: 1;
+		margin-top: 0px;
+	}
+}
+
+.menu li:nth-child(2) {
+	animation-delay: 0.4s;
+}
+
+.menu li:nth-child(3) {
+	animation-delay: 0.8s;
+}
+
+.menu li:nth-child(4) {
+	animation-delay: 1.2s;
+}
+
+.menu li:nth-child(5) {
+	animation-delay: 1.6s;
+}
+
+.menu li:nth-child(6) {
+	animation-delay: 2s;
+}
+
+@keyframes titlemove{
+	from {
+		opacity: 0;
+		margin-top: -500px;
+	}
+	to {
+		opacity: 1;
+		margin-left: 404px;
+	}
+}
+
 .logo1 {
 	text-align: center;
 	font-size: 30px;
 	margin: 110px 0px 42px 0px;
+	-webkit-animation: logo1 1s ease forwards;
+	-moz-animation: logo1 1s ease forwards;
+	-ms-animation: logo1 1s ease forwards;
+	-o-animation: logo1 1s ease forwards;
+	animation: logo1 1s ease forwards;
+	
+}
+
+@keyframes logo1 {
+	from {
+		opacity:0;
+		margin-left: -1000px;
+	}
+	to {
+		opacity: 1;
+		margin-left: 0%;
+	}
 }
 
 .imgs {text-align: center;}
@@ -92,14 +253,14 @@ nav{
  	border: 2px solid #6f707e;
  	border-radius: 5px;
  	font-size: 13px;
- 	padding: 9px 11px 9px 18px;
+ 	padding: 9px 11px 9px 18px; 	
  }
 
 .third {
 	margin-top: 97px;
 	padding-top: 3px;
 	background: url(../img/ЧтоЯумеюФон.jpg) center/100% 100% no-repeat;
-}
+}	
 
 .third ul {
 	text-align: center;
@@ -107,10 +268,30 @@ nav{
 	padding: 108px 260px;
 }
 
+
+
 .third li {
 	float: left;
 	text-align: center;
-	margin: 0px 41px;
+	margin: 0px 39px;
+	text-transform: uppercase;
+	display: inline-block;
+	width: 22%;
+	-webkit-animation: Cshift 1s ease forwards;
+	-o-animation: Cshift 1s ease forwards;
+	animation: Cshift 1s ease forwards;
+	opacity: 0;
+}
+
+@keyframes Cshift{
+	from {
+		opacity: 0;
+		margin-left: -150%;
+	}
+	to {
+		opacity: 1;
+		margin-left: 0px;
+	}
 }
 
 .third li img {
@@ -142,6 +323,7 @@ nav{
 
 .Company{
 	float: left;
+
 }
 
 .Company h3 {
@@ -165,9 +347,9 @@ nav{
 	padding: 15px 40px;
 }
 
+
 .ProjectName {
 	margin-left: 580px;
-
 }
 
 .ProjectName h4 {
@@ -179,7 +361,6 @@ nav{
 	font-size: 18px;
 }
 
-
 .aboba {
 	margin: 20px 0px 0px 494px;
 	text-align: left;
@@ -187,6 +368,7 @@ nav{
 
 .EzMoney h3 {
 	font-size: 25px;
+	margin-top: 20px;
 }
 
 
@@ -209,10 +391,13 @@ nav{
 	margin-right: 494px;
 }
 
+
 .stata {
 	margin-top: 97px;
 	padding-top: 3px;
-	background: url(../img/fon2.jpg) center/100% 100% no-repeat;
+	background: url(../img/keyboard.png) center/100% 100% no-repeat;
+	background-attachment: fixed;
+	color: white;
 }
 .stata ul {
 	text-align: center;
@@ -222,24 +407,46 @@ nav{
 .stata li {
 	float: left;
 	text-align: center;
-	margin: 0px 92px;
+	-webkit-animation: Sshift 1s ease forwards;
+	-o-animation: Sshift 1s ease forwards;
+	animation: Sshift 1s ease forwards;
+	opacity: 0;
+	display: inline-block;
+	
+}
 
+.stata li:nth-child(odd) {
+	margin-left: 250px;
+	margin-right: 250px;
+}
+.stata li:nth-child(2) {
+	margin-right: 250px;
+}
 
+@keyframes Sshift{
+	from {
+		opacity: 0;
+		margin-left: -150%;
+	}
+	to {
+		opacity: 1;
+		margin-left: 0px;
+	}
 }
 
 .stata li img {
 
 }
 
-.stata h4 {
-	font-size: 18px;
-	color: #323e4f;
+.stata h3 {
+	font-size: 20px;
 }
 
-.stata h5 {
-	font-size: 14px;
-	color: #323e4f;
+.stata h4 {
+	font-size: 18px;
+	color: ghostwhite;
 }
+
 
 .Otzivi {
 	text-align: center;
@@ -249,12 +456,12 @@ nav{
 footer {
 	background: url(../img/fon3.jpg) center/ 100% 100% no-repeat;
 	text-align: center;
+	color: white;
+	margin-top: 30px;
 }
 
-footer h2 {
-	color: white;
-	font-size: 30px;
-	margin: 110px 0px 42px 0px;
+footer logo1 {
+
 }
 
 footer span {
