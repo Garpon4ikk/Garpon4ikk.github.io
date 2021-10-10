@@ -40,14 +40,15 @@ nav{
 	height: 60px;
 	background: #344851;
 	position: fixed;
-	z-index: 2;
+	z-index: 10;
 }
+
+
 
 .logo{
 	color: white;
 	font-size: 28px;
 	line-height: 60px;
-	padding-left: 388px;
 	float: left;
 	-webkit-animation: coming 0.4s ease;
 	-o-animation: coming 0.4s ease;
@@ -61,7 +62,6 @@ main {
 
 .menu{
 	float: left;
-	padding-left: 432px;
 }
 
 .menu li{
@@ -69,7 +69,7 @@ main {
 	line-height: 60px;
 	color: white ;
 	margin-right: 40px;
-	font-size: 16px;
+	font-size: 14px;
 	text-transform: uppercase;
 	-webkit-animation: topshift 0.4s ease forwards;
 	-o-animation: topshift 0.4s ease forwards;
@@ -82,6 +82,7 @@ main {
 	color: white;
 	transform: scale(1);
 	display: inline-block;
+	text-decoration: none;
 	
 }
 
@@ -99,17 +100,18 @@ main {
 }
 
 
-.main{
+main{
 	width: 100%;
 	height: 100% ;
-	background: url(../img/boy.png) 90% 100%/auto 85% no-repeat, url(../img/фон.png) center/cover no-repeat;
+	background: url(../img/boy.png) 90% 100%/auto 85% no-repeat, 
+	url(../img/фон.png) center/cover no-repeat;
 }
 
 .title_container {
 	float: left;
-	margin: 432px 0px 0px 404px;
 	color: rgb(44, 56, 74);
 	text-align: center;
+	width: 100%;
 	opacity: 0;
 	-webkit-animation: titlemove 1s ease forwards;
 	-o-animation: titlemove 1s ease forwards;
@@ -119,12 +121,13 @@ main {
 	-ms-animation-delay: 2.4s;
 	-o-animation-delay: 2.4s;
 	animation-delay: 2.4s;
-	
 }
 
+
 .title_container h1{
-	font-size: 60px;
-	font-weight: bold;
+	font-size: 72px;
+	font-weight: 600;
+	font-family: Arial; sans-serif;
 }
 
 .title_container h4{
@@ -205,7 +208,7 @@ main {
 	}
 	to {
 		opacity: 1;
-		margin-left: 404px;
+		margin-left: 0px;
 	}
 }
 
@@ -242,41 +245,49 @@ main {
 .second {
 	text-align: center;
 }
+
  .second span {
  	text-align: left;
  }
 
- .second input {
+
+ .second input  {
  	background: url(../img/DowlandIco.png) left/12px 11px no-repeat ;
  	background-position: 7%  ;
  	height: 33px;
  	border: 2px solid #6f707e;
  	border-radius: 5px;
  	font-size: 13px;
- 	padding: 9px 11px 9px 18px; 	
+ 	padding: 9px 11px 9px 18px; 
+	transition: all 0.2s;
+	transform: scale(1.0);
+ }
+
+ .second input:hover {
+ 	transform: scale(1.3);
+ }
+
+ .second input:active {
+ 	transform: scale(1.0);
  }
 
 .third {
 	margin-top: 97px;
 	padding-top: 3px;
+	width: 100%;
 	background: url(../img/ЧтоЯумеюФон.jpg) center/100% 100% no-repeat;
 }	
 
 .third ul {
 	text-align: center;
 	display: inline-block;
-	padding: 108px 260px;
 }
 
 
 
 .third li {
-	float: left;
-	text-align: center;
-	margin: 0px 39px;
 	text-transform: uppercase;
 	display: inline-block;
-	width: 22%;
 	-webkit-animation: Cshift 1s ease forwards;
 	-o-animation: Cshift 1s ease forwards;
 	animation: Cshift 1s ease forwards;
@@ -295,18 +306,17 @@ main {
 }
 
 .third li img {
-	margin-bottom: 35px;
-	width: 55px;
+	
 	height: 36px;
 }
 
 .third h4 {
-	font-size: 18px;
+	font-size: 14px;
 	color: #cf7600;
 }
 
 .third h5 {
-	font-size: 14px;
+	font-size: 12px;
 	color: #3f495a;
 }
 
@@ -321,35 +331,35 @@ main {
 	text-align: center;
 }
 
+
 .Company{
 	float: left;
 
 }
 
 .Company h3 {
-	margin-left: 350px;
 	font-size: 24px;
 	font-weight: bold;
 }
 
 .Company h4 {
-	margin-left: 350px;
 	font-size: 16px;
 
 }
 
 .Company a {
-	margin: 38px 0px 0px 350px; /*margin 38px не работает, сдлал 2 <br> перед <a>
-	margin-top тоже почему то не работает*/
-	border: 1px solid #63b5ae;
-	background: #63b5ae;
-	border-radius: 5px;
-	padding: 15px 40px;
+	transform: scale(1.0);
+}
+
+.Company a:hover {
+	transform: scale(1.3);
+}
+
+.Company a:active {
+	transform: scale(1.0);
 }
 
 
-.ProjectName {
-	margin-left: 580px;
 }
 
 .ProjectName h4 {
@@ -511,7 +521,18 @@ footer h2 {
 	color: #6d7682;
 	font-size: 13px;
 	margin-bottom: 100px;
+	transform: all 0.2s;
+	transform: scale(1.0);
 }
+
+.send input:hover {
+	transform: scale(1.3);
+}
+
+.send input:active {
+	transform: scale(1.0);
+}
+
 .end{
 	widows: 100%;
 	height: 60px;
@@ -519,4 +540,36 @@ footer h2 {
 	text-align: center;
 	color: white;
 	padding-top: 20px;
+}
+
+.white-btn:visited {
+	color: white;
+}
+
+@media	(max-width: 991px) {
+	.title_container, .title_container h4, .title_container input{
+		color: white;
+		position: relative;
+		z-index: 3;
+	}
+	.title_container input {
+		border: 2px solid #fff;
+	}
+	
+
+	.main{
+		position: relative;
+	}
+	.main::after{
+		content: "";
+		bottom: 0;
+		top: 0;
+		left: 0;
+		right: 0;
+		position: absolute;
+		background: rgba(0, 0, 0, 0);
+		z-index: 1;
+	}
+
+
 }
