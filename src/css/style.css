@@ -392,35 +392,27 @@ main{
 	background: url(../img/keyboard.png) center/100% 100% no-repeat;
 	background-attachment: fixed;
 	color: white;
+	width: 100%;
 }
+
 .stata ul {
 	text-align: center;
-	display: inline-block;
-	padding: 108px 260px;
 }
+
 .stata li {
-	float: left;
-	text-align: center;
+	text-transform: uppercase;
+	display: inline-block;
 	-webkit-animation: Sshift 1s ease forwards;
 	-o-animation: Sshift 1s ease forwards;
 	animation: Sshift 1s ease forwards;
-	opacity: 0;
-	display: inline-block;
-	
+	opacity: 0;	
 }
 
-.stata li:nth-child(odd) {
-	margin-left: 250px;
-	margin-right: 250px;
-}
-.stata li:nth-child(2) {
-	margin-right: 250px;
-}
 
 @keyframes Sshift{
 	from {
 		opacity: 0;
-		margin-left: -150%;
+		margin-left: -250%;
 	}
 	to {
 		opacity: 1;
@@ -428,17 +420,8 @@ main{
 	}
 }
 
-.stata li img {
-
-}
-
-.stata h3 {
-	font-size: 20px;
-}
-
-.stata h4 {
-	font-size: 18px;
-	color: ghostwhite;
+.lilo img {
+	width: 100px;
 }
 
 
