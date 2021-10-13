@@ -393,19 +393,21 @@ main{
 	background-attachment: fixed;
 	color: white;
 	width: 100%;
+
 }
 
 .stata ul {
 	text-align: center;
 }
 
-.stata li {
+.col-3 {
 	text-transform: uppercase;
 	display: inline-block;
 	-webkit-animation: Sshift 1s ease forwards;
 	-o-animation: Sshift 1s ease forwards;
 	animation: Sshift 1s ease forwards;
 	opacity: 0;	
+	margin-bottom: 97px;
 }
 
 
@@ -446,18 +448,7 @@ footer span {
 	font-size: 15px ;
 }
 
-footer ul {
-	text-align: center;
-	display: inline-block;
-	padding: 108px 260px 0px 260px;
-}
-footer li {
-	float: left;
-	text-align: center;
-	margin: 0px 92px;
-}
-
-footer li img {
+.col-4 img {
 	margin-bottom: 35px;
 	width: 50px;
 	height: 50px;
@@ -472,32 +463,8 @@ footer h2 {
 	font-size: 20px;
 }
 
-.up input {
-	/*не понимаю как сделать окна ввода по рамерам*/
-	margin-left: 10px;
-	margin-right: 10px;
-	min-width: 450px;
-	height: 35px;
-}
-.send input {
-	height: 20px;
-	width: 100px;
-	text-align: center;
-	border: 2px solid #6d7682;
-	border-radius: 5px;
-	color: #6d7682;
-	font-size: 13px;
-	margin-bottom: 100px;
-	transform: all 0.2s;
-	transform: scale(1.0);
-}
-
-.send input:hover {
-	transform: scale(1.3);
-}
-
-.send input:active {
-	transform: scale(1.0);
+form {
+	padding-bottom: 100px;
 }
 
 .end{
