@@ -35,6 +35,14 @@ body {
 }
 /*прелоадер кончился*/
 
+.stata-anim {
+	opacity: 0;
+}
+.stata-anim.ShowStata {
+	opacity: 1;
+	transition: opacity 1s;
+}
+
 nav{
 	width: 100%;
 	height: 60px;
@@ -43,7 +51,20 @@ nav{
 	z-index: 10;
 }
 
+.logo-animation {
+	opacity: 0;
+}
+.ShowLogo {
+	opacity: 1;
+	transition: opacity 1s;
+}
 
+.logo1 {
+	text-align: center;
+	font-size: 30px;
+	margin: 110px 0px 42px 0px;
+	opacity: 0;
+}
 
 .logo{
 	color: white;
@@ -212,29 +233,9 @@ main{
 	}
 }
 
-.logo1 {
-	text-align: center;
-	font-size: 30px;
-	margin: 110px 0px 42px 0px;
-	-webkit-animation: logo1 1s ease forwards;
-	-moz-animation: logo1 1s ease forwards;
-	-ms-animation: logo1 1s ease forwards;
-	-o-animation: logo1 1s ease forwards;
-	animation: logo1 1s ease forwards;
+
+
 	
-}
-
-@keyframes logo1 {
-	from {
-		opacity:0;
-		margin-left: -1000px;
-	}
-	to {
-		opacity: 1;
-		margin-left: 0%;
-	}
-}
-
 .imgs {text-align: center;}
 
 .BW {
@@ -381,11 +382,6 @@ main{
 	margin-top: 20px;
 }
 
-
-
-
-
-
 .stata {
 	margin-top: 97px;
 	padding-top: 3px;
@@ -400,16 +396,18 @@ main{
 	text-align: center;
 }
 
-.col-3 {
+.stataAnim {/*
 	text-transform: uppercase;
-	display: inline-block;
-	-webkit-animation: Sshift 1s ease forwards;
+	display: inline-block;*/
+}
+
+.stataAnim-animation{
+		-webkit-animation: Sshift 1s ease forwards;
 	-o-animation: Sshift 1s ease forwards;
 	animation: Sshift 1s ease forwards;
 	opacity: 0;	
 	margin-bottom: 97px;
 }
-
 
 @keyframes Sshift{
 	from {
@@ -421,6 +419,7 @@ main{
 		margin-left: 0px;
 	}
 }
+
 
 .lilo img {
 	width: 100px;
