@@ -9,6 +9,9 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 </head>
 <body>
 
@@ -23,12 +26,12 @@
 					<div class="col-xxl-2 col-lg-3 col-7"><div class="logo">Андрей Браун</div></div>
 						<div class="px-0 col-xxl-6 col-xl-7 col-lg-8 offset-xxl-4 offset-xl-2 offset-lg-1 d-none d-lg-block"><div class="menu">
 			<ul>
-				<li><a href="#"> Обо мне</a></li>
-				<li><a href="#">Услуги</a></li>
-				<li><a href="#">Кейсы</a></li>
-				<li><a href="#">Прайс</a></li>
-				<li><a href="#">Отзывы</a></li>
-				<li><a href="#">Контакты</a></li>
+				<li><a href="#R1">Обо мне</a></li>
+				<li><a href="#R2">Услуги</a></li>
+				<li><a href="#R3">Кейсы</a></li>
+				<li><a href="#R4">Прайс</a></li>
+				<li><a href="#R5">Отзывы</a></li>
+				<li><a href="#R6">Контакты</a></li>
 			</ul>
 			</div></div>
 			<div class="col-5 d-flex d-lg-none flex-column justify-content-center align-items-end">
@@ -37,12 +40,12 @@
     Навгация
   </a>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Обо мне</a></li>
-    <li><a class="dropdown-item" href="#">Услуги</a></li>
-    <li><a class="dropdown-item" href="#">Кейсы</a></li>
-    <li><a class="dropdown-item" href="#">Прайс</a></li>
-    <li><a class="dropdown-item" href="#">Отзывы</a></li>
-    <li><a class="dropdown-item" href="#">Контакты</a></li>
+    <li><a class="dropdown-item" href="#R1">Обо мне</a></li>
+    <li><a class="dropdown-item" href="#R2">Услуги</a></li>
+    <li><a class="dropdown-item" href="#R4">Кейсы</a></li>
+    <li><a class="dropdown-item" href="#R4">Прайс</a></li>
+    <li><a class="dropdown-item" href="#R5">Отзывы</a></li>
+    <li><a class="dropdown-item" href="#R6">Контакты</a></li>
   </ul>
 </div>
 			</div></div>
@@ -68,7 +71,7 @@
 	</main>
 
 	<div class="second">
-			<div class="logo1"><b>ОБО МНЕ</div>
+			<div class="logo1 logo-animation" id="R1"><b>ОБО МНЕ</div>
 				<div class="imgs"> 
 					<img src="img/poloska.png"> </div>
 					<div class="BW">
@@ -87,7 +90,7 @@
 <third>
 
 	<div class="third">
-			<div class="logo1">ЧТО Я УМЕЮ</div>
+			<div class="logo1 logo-animation" id="R2">ЧТО Я УМЕЮ</div>
 					<div class="imgs"> 
 			<img src="img/poloska.png"> </div>
 				<div class="container-fluid overflow-hidden px-4">
@@ -131,10 +134,18 @@
 <div class="container">
 	<div class="col-12"></div>
 	<div class="casess">
-		<div class="logo1">КЕЙСЫ</div>
+		<div class="logo1 logo-animation" id="R3">КЕЙСЫ</div>
 		<div class="imgs"> <img src="img/poloska.png"> </div>
 			<h1>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Tenetur quod voluptas iure pariatur, vero accusamus amet dolorum odit?</h1>
-			<img src="img/ScrinSaita.jpg" class="rounded mx-auto d-block w-100" alt="Скрин Сайта"><br></div>
+			
+			<div class="container"><div class="row"><div class="col">
+					<div class="fotorama" data-allowfullscreen="true" data-keyboard="true" data-swipe="false" data-fit="cover">
+ 			 <img src="img/ScrinSaita.jpg">
+ 			 <img src="https://s.fotorama.io/2.jpg">
+			</div>
+
+			</div></div></div>
+		
 
 				<div class="container"><div class="row">
 					<div class="col-lg-3 col-sm-12">
@@ -156,13 +167,13 @@
 
 <div class="container"><div class="row">
 	<div class="EzMoney">
-		<div class="logo1">Расчёт стоимости</div>
+		<div class="logo1 logo-animation" id="R4">Расчёт стоимости</div>
 
 
 		<div class="aboba">
 		<h3>ТИП САЙТА</h3>
 
-		<select class="form-select form-select-lg mb-3" aria-label="form-select-lg example">
+		<select class="form-select form-select-lg mb-3 " aria-label="form-select-lg example" id="type">
   			<option selected>Выберите пункт...</option>
   			<option value="1">Корпоративный</option>
   			<option value="2">Личный</option>
@@ -171,7 +182,7 @@
 
 		<h3>ДИЗАЙН</h3>
  
- 		<select class="form-select form-select-lg mb-3" aria-label="form-select-lg example">
+ 		<select class="form-select form-select-lg mb-3 " aria-label="form-select-lg example" id="design">
   			<option selected>Выберите пункт...</option>
   			<option value="1">Строгий</option>
   			<option value="2">Ничё такой</option>
@@ -181,7 +192,7 @@
 		<h3>АДАПТИВНОСТЬ</h3>
 
 
-			<select class="form-select form-select-lg mb-3" aria-label="form-select-lg example">
+			<select class="form-select form-select-lg mb-3 " aria-label="form-select-lg example" id="adaptation">
   			<option selected>Выберите пункт...</option>
   			<option value="1">Пека</option>
   			<option value="2">Телефония</option>
@@ -197,14 +208,14 @@
 			</div>
 			<div class="col-9"></div>
 			<div class="col-1 text-end">
-				<h4><strong>0</h4></strong>
+				<h4><strong><p id="calcTime"><span> дней</span></p></h4></strong>
 			</div>
 			<div class="col-2">
 				<h4><strong>Стоимость</strong></h4>
 			</div>
 			<div class="col-9"></div>
 			<div class="col-1 text-end">
-				<h4><strong>0</h4></strong>
+				<h4><strong><p id="calcMoney"></p> </h4></strong>
 			</div>
 		</div></div>
 
@@ -214,12 +225,11 @@
 
 
 	<div class="stata">
-		<div class="logo1">Немного статистики</div>
+		<div class="logo1 logo-animation">Немного статистики</div>
 		<div class="imgs"><img src="img/poloska.png"></div>
 
-
-		<div class="lilo">
-			<div class="container ">
+<div class="stataAnim">		<div class="lilo ">
+			<div class="container mt-5">
 				<div class="row justify-content-between text-center ">
 				
 				
@@ -257,12 +267,13 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div></div>
+
 
 
 
 	<div class="Otzivi">
-		<div class="logo1">Отзывы</div>
+		<div class="logo1 logo-animation" id="R5">Отзывы</div>
 		<div class="imgs"><img src="img/poloska.png"> </div>
 			<div class="pic">
 				<img src="https://www.meme-arsenal.com/memes/8b33774b2fbb62cbe840e7620482557e.jpg" alt="Фото" width="200">
@@ -275,7 +286,7 @@
 
 	<footer>
 		<br>
-		<div class="logo1">Мои контакты</div>
+		<div class="logo1 logo-animation" id="R6">Мои контакты</div>
 		<div class="imgs"> <img src="img/poloska.png"> </div>
 		<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, beatae?</span><br>
 
@@ -344,6 +355,7 @@
     }
  </script>
  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
  <script src="js/myScript.js"></script>
 </body>
 </html>
