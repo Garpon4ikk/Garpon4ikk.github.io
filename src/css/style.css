@@ -50,10 +50,10 @@ nav{
 	position: fixed;
 	z-index: 10;
 }
-
+/*
 .logo-animation {
 	opacity: 0;
-}
+}*/
 .ShowLogo {
 	opacity: 1;
 	transition: opacity 1s;
@@ -63,7 +63,6 @@ nav{
 	text-align: center;
 	font-size: 30px;
 	margin: 110px 0px 42px 0px;
-	opacity: 0;
 }
 
 .logo{
@@ -74,11 +73,6 @@ nav{
 	-webkit-animation: coming 0.4s ease;
 	-o-animation: coming 0.4s ease;
 	animation: coming 0.4s ease;
-}
-
-main {
-	width: 100%;
-	height: 100%;
 }
 
 .menu{
@@ -373,7 +367,6 @@ main{
 }
 
 .aboba {
-
 	text-align: left;
 }
 

@@ -1,5 +1,7 @@
 "use strict"
 
+
+
 /*var delayInMilliseconds = 30000;
 
 setTimeout(function() {
@@ -35,14 +37,14 @@ $('a[href^="#"]').click(function(){
 	$('html, body').animate ({scrollTop: $(valHref).offset().top - 70 + "px"});
 }); 
 
-
-    var type = localStorage.getItem('message');
-    document.getElementById('message').innerHTML = x;
+ calcAll.onclick = function() {
+    alert('Спасибо');
+  };
 
 var type = document.getElementById('type').value
 var design = document.getElementById('design').value
 var adaptation = document.getElementById('adaptation').value
-setInterval(function() {
+calcAll.onclick = function() {
 /*РАСЧЁТ МАНЕЙ*/
 var calc = 0;
 var calcT = 0;
@@ -93,7 +95,7 @@ if (adaptation ==3) {
 	calcT = calcT + 3;}
 document.getElementById("calcMoney").innerHTML = calc;
 document.getElementById("calcTime").innerHTML = calcT;
-}, 1);
+};
 
 
 /*анимка лого*/
@@ -112,7 +114,6 @@ function onEntry (entry){
 	})
 }
 })
-
 
 
 
@@ -137,7 +138,6 @@ $(document).ready (function () {
 
 
 
-
 /*анимка статы*/
 $(document).ready (function () {
   var stataAnim = document.querySelector('.stataAnim');
@@ -157,3 +157,20 @@ $(document).ready (function () {
   observer.observe(stataAnim);
 });
 
+
+$("#inputPhone").mask("+7(999)999-9999");
+
+
+$('form').submit(function(event){
+	event.preventDefault();
+	$.ajax({
+		type: "POST",
+		url: "php/mail.php",
+		data: $(this).serialize()
+	}).done(function(){
+		$(this).find("input").val("");
+		alert("u sex");
+		$("form").trigger("reset");
+	});
+	return false
+})

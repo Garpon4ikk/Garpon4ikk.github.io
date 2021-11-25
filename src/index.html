@@ -6,6 +6,7 @@
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -69,9 +70,9 @@
 			</div>
 		</div>
 	</main>
-
+	
 	<div class="second">
-			<div class="logo1 logo-animation" id="R1"><b>ОБО МНЕ</div>
+			<section class="wow slideInLeft"  data-wow-duration="1.5s"><div class="logo1 " id="R1"><b>ОБО МНЕ</div></section>
 				<div class="imgs"> 
 					<img src="img/poloska.png"> </div>
 					<div class="BW">
@@ -90,7 +91,7 @@
 <third>
 
 	<div class="third">
-			<div class="logo1 logo-animation" id="R2">ЧТО Я УМЕЮ</div>
+			<section class="wow slideInLeft"  data-wow-duration="1.5s"><div class="logo1 logo-animation" id="R2">ЧТО Я УМЕЮ</div></section>
 					<div class="imgs"> 
 			<img src="img/poloska.png"> </div>
 				<div class="container-fluid overflow-hidden px-4">
@@ -134,7 +135,7 @@
 <div class="container">
 	<div class="col-12"></div>
 	<div class="casess">
-		<div class="logo1 logo-animation" id="R3">КЕЙСЫ</div>
+		<section class="wow slideInLeft"  data-wow-duration="1.5s"><div class="logo1 logo-animation" id="R3">КЕЙСЫ</div></section>
 		<div class="imgs"> <img src="img/poloska.png"> </div>
 			<h1>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Tenetur quod voluptas iure pariatur, vero accusamus amet dolorum odit?</h1>
 			
@@ -167,7 +168,7 @@
 
 <div class="container"><div class="row">
 	<div class="EzMoney">
-		<div class="logo1 logo-animation" id="R4">Расчёт стоимости</div>
+		<section class="wow slideInLeft"  data-wow-duration="1.5s"><div class="logo1 logo-animation" id="R4">Расчёт стоимости</div></section>
 
 
 		<div class="aboba">
@@ -198,6 +199,10 @@
   			<option value="2">Телефония</option>
   			<option value="3">Два реальных аппарата</option>
 			</select>
+
+			<div class="d-grid gap-2">
+  			<button class="btn btn-primary" type="button" id="calcAll">Расчитать</button>
+			</div>
 		
 		<br><br><img src="img/poditog.jpg" class="img-fluid w-100"><br><br>
 		
@@ -208,7 +213,7 @@
 			</div>
 			<div class="col-9"></div>
 			<div class="col-1 text-end">
-				<h4><strong><p id="calcTime"><span> дней</span></p></h4></strong>
+				<h4><strong><p id="calcTime"></p></h4></strong>
 			</div>
 			<div class="col-2">
 				<h4><strong>Стоимость</strong></h4>
@@ -225,7 +230,7 @@
 
 
 	<div class="stata">
-		<div class="logo1 logo-animation">Немного статистики</div>
+		<section class="wow slideInLeft"  data-wow-duration="1.5s"><div class="logo1 logo-animation">Немного статистики</div></section>
 		<div class="imgs"><img src="img/poloska.png"></div>
 
 <div class="stataAnim">		<div class="lilo ">
@@ -273,7 +278,7 @@
 
 
 	<div class="Otzivi">
-		<div class="logo1 logo-animation" id="R5">Отзывы</div>
+		<section class="wow slideInLeft"  data-wow-duration="1.5s"><div class="logo1 logo-animation" id="R5">Отзывы</div></section>
 		<div class="imgs"><img src="img/poloska.png"> </div>
 			<div class="pic">
 				<img src="https://www.meme-arsenal.com/memes/8b33774b2fbb62cbe840e7620482557e.jpg" alt="Фото" width="200">
@@ -286,8 +291,8 @@
 
 	<footer>
 		<br>
-		<div class="logo1 logo-animation" id="R6">Мои контакты</div>
-		<div class="imgs"> <img src="img/poloska.png"> </div>
+		<section class="wow slideInLeft"  data-wow-duration="1.5s"><div class="logo1 logo-animation" id="R6">Мои контакты</div>
+		<div class="imgs"> <img src="img/poloska.png"> </div></section>
 		<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, beatae?</span><br>
 
 
@@ -313,24 +318,30 @@
 		<h2>Оставь мне сообщение</h2>
 
 
-	<form>
+	<form action="php/mail.php" method="post">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 col-12">
+			<div class="col-md-4 col-12">
   		<div class="input-group mb-3 ">
-  			<span class="input-group-text" id="basic-addon1">Имя</span>
- 					 <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+  			<span class="input-group-text"   id="basic-addon1">Имя</span>
+ 					 <input type="text"  required class="form-control" aria-label="Username" aria-describedby="basic-addon1" name="Username">
 			</div></div>
-  		<div class="col-md-6 col-12">
+  		<div class="col-md-4 col-12">
 				<div class="input-group mb-3">
-  				<input type="text" class="form-control" placeholder="Recipient's E-mail" aria-label="Recipient's E-mail" aria-describedby="basic-addon2">
+  				<input type="text" required class="form-control" placeholder="Введите E-mail" aria-label="Recipient's E-mail" aria-describedby="basic-addon2" name="Usermail">
   				<span class="input-group-text" id="basic-addon2">E-mail</span>
+				</div>
+			</div>
+			<div class="col-md-4 col-12">
+				<div class="input-group mb-3">
+  				<input type="phone" required class="form-control" placeholder="Введите номер телефона" aria-label="Recipient's E-mail" aria-describedby="basic-addon2" id="inputPhone" name="UserPhone">
+  				<span class="input-group-text" id="basic-addon2">Телефон</span>
 				</div>
 			</div>
  		 	<div class="col-12 my-4">
 				<div class="input-group">
   				<span class="input-group-text">Сообщение</span>
-  				<textarea class="form-control" aria-label="With textarea"></textarea>
+  				<textarea class="form-control" aria-label="With textarea" name="Usertext"></textarea>
 				</div>
 			</div>
   		<button type="submit" class="btn btn-primary">Submit</button>
@@ -338,6 +349,12 @@
 	</div>
 	</form>
 </footer>
+
+<div class="container"><div class="row">
+	<div class="col-12">
+		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ada2df6ea2bb06e28c9ae3d81a6d56aafd3d7e00aa12281c5656a8a69e57fdeb1&amp;width=100%25&amp;height=407&amp;lang=ru_RU&amp;scroll=false"></script>
+	</div>
+</div></div>	
 
 
 <div class="end">
@@ -355,7 +372,10 @@
     }
  </script>
  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/jquery-3.6.0.min.js"></script>
+ <script src="js/jquery-3.6.0.min.js"></script>
+ <script src="js/jquery.maskedinput.min.js"></script>
  <script src="js/myScript.js"></script>
+ <script src="js/wow.min.js"></script>
+ <script>new WOW().init();</script>
 </body>
 </html>
