@@ -1,0 +1,343 @@
+body {
+  font-family: 'Playfair Display', serif;
+  background: url(../img/lowpoly1.png) no-repeat;
+}
+
+/*Прелоадер начался*/
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background: #fff;
+  z-index: 1001;
+}
+
+.preloader__image {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 180px;
+  height: 40px;
+  margin-top: -32px;
+  margin-left: -32px;
+  background: url('../img/220.gif') no-repeat 50% 50%;
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+/*прелоадер кончился*/
+
+nav{
+  width: 100%;
+  height: 60px;
+  background: #4b2387;
+  position: fixed;
+  z-index: 10;
+}
+
+.logo{
+  color: white;
+  font-size: 28px;
+  line-height: 60px;
+  float: left;
+  /*-webkit-animation: coming 0.4s ease;
+  -o-animation: coming 0.4s ease;
+  animation: coming 0.4s ease;*/
+}
+@keyframes coming {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.menu{
+  float: left;
+}
+
+.menu li{
+  float: left;
+  line-height: 60px;
+  color: white ;
+  margin-right: 40px;
+  font-size: 14px;
+  text-transform: uppercase;
+  /*-webkit-animation: topshift 0.4s ease forwards;
+  -o-animation: topshift 0.4s ease forwards;
+  animation: topshift 0.4s ease forwards;
+  opacity: 0;*/
+}
+
+.menu li a {
+  transition: all 0.3s;
+  color: white;
+  transform: scale(1);
+  display: inline-block;
+  text-decoration: none;
+  
+}
+
+.menu li a:visited {
+  color: white;
+}
+
+
+.menu li a:hover {
+  color: orange;
+}
+
+.menu li a:active {
+  transform: scale(1.1);
+}
+
+@keyframes topshift{
+  from {
+    opacity: 0;
+    margin-top: -80px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+.menu li:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.menu li:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+.menu li:nth-child(4) {
+  animation-delay: 1.2s;
+}
+
+.menu li:nth-child(5) {
+  animation-delay: 1.6s;
+}
+
+.menu li:nth-child(6) {
+  animation-delay: 2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+main{
+  width: 100%;
+  height: 100%;
+  background: url(../img/фон1.jpg) center/cover no-repeat;
+  
+}
+
+.title_container {
+  text-align: center;
+  width: 100%;
+  padding-top: 5%;
+  /*opacity: 0;
+  -webkit-animation: titlemove 1s ease forwards;
+  -o-animation: titlemove 1s ease forwards;
+  animation: titlemove 1s ease forwards;
+  -webkit-animation-delay: 2.4s;
+  -moz-animation-delay: 2.4s;
+  -ms-animation-delay: 2.4s;
+  -o-animation-delay: 2.4s;
+  animation-delay: 2.4s;*/
+}
+
+@keyframes titlemove{
+  from {
+    opacity: 0;
+    margin-top: -500px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+
+.title_container h1{
+  color: #4b2387;
+  font-size: 72px;
+  font-weight: 600;
+  text-shadow: #b3dee8 2px 2px 4px;
+}
+
+
+.title_container h4{
+  margin-top: 40px;
+  font-size: 30px;
+  color: #b3dee8;
+  text-shadow: #4b2387 2px 2px 3px;
+}
+
+.title_container a {
+  padding: 8px 16px;
+  width: 200px;
+  margin: 58px 14px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.title_container a /*АНИМКИ*/ {
+  transition: all 0.2s;
+  transform: scale(1.0);
+}
+
+
+
+
+
+
+
+
+
+
+
+.logo1 {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 20px;
+  background: linear-gradient(to right, #5f3c75, #413666);
+}
+
+.logo1 h2 {
+  font-size: 50px;
+  margin: 0;
+  background: white;
+  mix-blend-mode: screen;
+}
+
+.poloska {
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+.second {
+  text-align: center;
+  background: white;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 10%;
+  border: 5px solid white;
+  border-radius: 5px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  padding: 0% 5% 5% 5%;
+  position: relative;
+}
+
+.card-fluid{
+  height: 150px;
+  width: 150px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translate(0, -50%);
+}
+
+.card-body {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.second h5 {
+  font-size: 30px;
+}
+
+.second p {
+  font-size: 20px;
+}
+
+.card1 {
+  background: url(../img/card1.png) round;
+}
+
+.card2 {
+  background: url(../img/card2.png) round;
+}
+
+.card3 {
+  background: url(../img/card3.png) round;
+}
+
+.card4 {
+  background: url(../img/card4.png);
+}
+
+
+
+
+
+
+
+
+
+
+
+.cases {
+  text-align: center;
+  background: white;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 10%;
+  border: 5px solid white;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.zakaz {
+  text-align: center;
+  background: white;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 10%;
+  border: 5px solid white;
+  border-radius: 5px;
+}
+
+.zakaz-body{
+  text-align: left;
+}
+
