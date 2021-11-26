@@ -20,15 +20,13 @@
 <nav>
 	<div class="container">
 		<div class="row">
-			<div class="col-xxl-2 col-lg-3 col-7"><div class="logo">Трах Трахыч</div></div>
+			<div class="col-xxl-2 col-lg-3 col-7 logo"><a href="#R0">Трах Трахыч</a></div>
 				<div class="px-0 col-xxl-6 col-xl-7 col-lg-8 offset-xxl-4 offset-xl-2 offset-lg-1 d-none d-lg-block"><div class="menu">
 			<ul>
 				<li><a href="#R1">Обо мне</a></li>
-				<li><a href="#R2">Услуги</a></li>
-				<li><a href="#R3">Кейсы</a></li>
-				<li><a href="#R4">Прайс</a></li>
-				<li><a href="#R5">Отзывы</a></li>
-				<li><a href="#R6">Контакты</a></li>
+				<li><a href="#R2">Кейсы</a></li>
+				<li><a href="#R3">Заказать</a></li>
+				<li><a href="#R4">Контакты</a></li>
 			</ul>
 			</div></div>
 			<div class="col-5 d-flex d-lg-none flex-column justify-content-center align-items-end">
@@ -38,25 +36,23 @@
   </a>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
     <li><a class="dropdown-item" href="#R1">Обо мне</a></li>
-    <li><a class="dropdown-item" href="#R2">Услуги</a></li>
-    <li><a class="dropdown-item" href="#R4">Кейсы</a></li>
-    <li><a class="dropdown-item" href="#R4">Прайс</a></li>
-    <li><a class="dropdown-item" href="#R5">Отзывы</a></li>
-    <li><a class="dropdown-item" href="#R6">Контакты</a></li>
+    <li><a class="dropdown-item" href="#R2">Кейсы</a></li>
+    <li><a class="dropdown-item" href="#R3">Заказать</a></li>
+    <li><a class="dropdown-item" href="#R4">Контакты</a></li>
   </ul>
 </div>
 </div></div>
 </nav>
 
 <main>
- 	<div class="container h-100">
+ 	<div class="container h-100" id="R0">
 			<div class="row align-items-center h-100">
 				<section class="main">
 					<div class="title_container mt-5">
 						<h1>Всем привет!</h1>
 						<h4>Меня зовут Алексей! <br>Я занимаюсь веб-разработкой и дизайном сайтов.</h4>	
-						<a class="btn btn-outline-light" href="#" role="button">Мои работы</a>
-						<a class="btn btn-outline-light" href="#" role="button">Услуги</a>
+						<a class="btn btn-outline-light" href="#R2" role="button">Мои работы</a>
+						<a class="btn btn-outline-light" href="#R3" role="button">Услуги</a>
 					</div>
 				</section>
 			</div>
@@ -208,7 +204,7 @@
 
 
 
-<div class="zakaz"><section class="wow slideInLeft"  data-wow-duration="1.5s"><div class="logo1 " id="R2"><h2>Сделать заказ</h2></div></section>
+<div class="zakaz"><section class="wow slideInLeft"  data-wow-duration="1.5s"><div class="logo1 " id="R3"><h2>Сделать заказ</h2></div></section>
 	<div class="poloska"><img src="img/491.svg"></div>
 	
 	<div class="container">
@@ -217,7 +213,7 @@
 
 				<h3>ТИП САЙТА</h3>
 
-				<select class="form-select form-select-lg mb-3 " aria-label="form-select-lg example" id="type">
+				<select onchange="OnFunction(this.value)" class="form-select form-select-lg mb-3 " aria-label="form-select-lg example" id="type">
 		  		<option selected>Выберите пункт...</option>
 		  		<option value="1">Корпоративный</option>
 		  		<option value="2">Личный</option>
@@ -226,27 +222,29 @@
 				<h3>АДАПТИВНОСТЬ</h3>
 
 			
-				<select class="form-select form-select-lg mb-3 " aria-label="form-select-lg example" id="adaptation">
+				<select onchange="OnFunction(this.value)" class="form-select form-select-lg mb-3 " aria-label="form-select-lg example" id="adaptation">
 		  		<option selected>Выберите пункт...</option>
 		  		<option value="1">Только ПК</option>
 		  		<option value="2">Только мобильные устройства</option>
 		  		<option value="3">ПК и мобильные устройства</option>
 				</select>
 				
-				<div id="radio">
-				<div class="form-check">
-				  <input class="form-check-input" type="radio" name="design" value="1" id="r1" >
-				  <label class="form-check-label" for="r1">
-				    Разработка дизайна не нужна
-				  </label>
+				
+				<div id="radio" onchange="OnFunction(this.value)">
+					<div class="form-check">
+					  <input class="form-check-input" type="radio" name="design" value="1" id="r1" >
+					  <label class="form-check-label" for="r1">
+					    Разработка дизайна не нужна
+					  </label>
+					</div>
+					<div class="form-check">
+					  <input class="form-check-input" type="radio" name="design" value="2" id="r2"  checked>
+					  <label class="form-check-label" for="r2">
+					    Разработка дизайна нужна
+					  </label>
+					</div>
 				</div>
-				<div class="form-check">
-				  <input class="form-check-input" type="radio" name="design" value="2" id="r2"  checked>
-				  <label class="form-check-label" for="r2">
-				    Разработка дизайна нужна
-				  </label>
-				</div>
-			</div>
+
 				<div class="d-grid gap-2">
 		  		<button class="btn btn-primary" type="button" id="calcAll">Расчитать</button>
 				</div>
@@ -271,6 +269,55 @@
 	</div>
 </div>
 
+
+
+
+
+
+
+
+
+
+<footer>
+<div class="Kontakt"><section class="wow slideInLeft"  data-wow-duration="1.5s"><div class="logo1 " id="R4"><h2>Связаться со мной</h2></div></section>
+	<div class="poloska"><img src="img/491.svg"></div>
+
+<h2>Мои контакты:</h2>
+
+<div class="container penis">
+	<div class="row">
+		<div class="col-lg-4 col-12">
+			<img src="img/тг.png" alt="" ><br>
+				<a href="https://t.me/Garpon4ikk" target="_blank">Telegram <br>@Garpon4ikk</a>
+		</div>
+
+		<div class="col-lg-4 col-12">
+			<img src="img/почта.png" alt="" ><br>
+				<a href="mailto:zakaz_garpon@internet.ru?subject=Хочу сделать заказ" target="_blank">Почта <br>zakaz_garpon@internet.ru</a>
+		</div>
+
+		<div class="col-lg-4 col-12">
+			<img src="img/теле.png" alt="" ><br>
+				<a href="tel:+79042221287" target="_blank">Телефон <br>+7(904)222-12-87</a>
+		</div>
+	</div>
+</div>
+</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+<div class="end">
+<span>Copyright©2021 Трах Трахыч. Design by Трах Трахыч</span>
+</div>
+
 <script>
     window.onload = function () {
       document.body.classList.add('loaded_hiding');
@@ -282,6 +329,7 @@
 </script>
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/myScript.js"></script>
 </body>
 </html>
